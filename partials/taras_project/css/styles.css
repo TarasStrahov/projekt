@@ -1,0 +1,353 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') center/cover;
+}
+
+/* Шапка сайта */
+header {
+    background: #000;
+    padding: 20px;
+    text-align: center;
+    top: 0;
+    z-index: 100;
+    position:sticky;
+}
+
+/* Навигация */
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Основной контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 3% 10%;
+}
+
+.container-main {
+    text-align: center;
+}
+
+/* Сетка */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+.col-50 {
+    width: 48%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Контейнер галереи */
+.container-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+/* Элементы галереи */
+.gallery-item {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.container-gallery .gallery-item:nth-child(n+4) {
+    margin-top: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+/* Форма */
+form {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Футер */
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Вопросы и ответы (FAQ) */
+.qna-item {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.qna-item h2 {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+.qna-item p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.qna-item p.active {
+    max-height: 200px;
+    padding: 10px;
+}
+/* Добавьте этот CSS в ваш файл стилей */
+footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    color: #333;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.col-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Опциональные стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.contact-table {
+    margin: 20px auto;
+    width: 80%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+thead {
+    background-color: #333;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+main {
+    padding: 20px;
+}
+
+.container-main {
+    margin-bottom: 30px;
+}
+
+.container-main h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.container-main p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.container-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container-info p {
+    font-size: 16px;
+}
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+.site-info,
+.contact-info {
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: #fff;
+}
+
+.copyright {
+    font-size: 14px;
+}
+.container-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container-info .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.container-info .col-50 {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.container-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.container-info p {
+    color: #666;
+    line-height: 1.6;
+}
+.carousel {
+    height: 650px; 
+  }
+
+  .slick-dots {
+    display: none;
+  }
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
