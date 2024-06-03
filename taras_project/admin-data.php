@@ -5,7 +5,7 @@ require_once('user.php');
 session_start();
 
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || !isset($_SESSION['is_admin']) || $_SESSION['is_admin'] != 1) {
-    header('Location: login.php'); // Перенаправление на страницу логина при отсутствии прав
+    header('Location: login.php');
     exit();
 }
 
