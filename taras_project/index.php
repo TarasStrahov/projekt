@@ -23,12 +23,7 @@
 						<p><strong><em> Vitajte vo svete legendárnych automobilov Porsche!</em></strong></p>
 					</div>
 				</div>
-			</section>
-			<div class="carousel">
-				<div><img src="img/E1D308FABA71409C93560855282CF829_437E590174E049EE91B9C6E16D4E1E72_discovering-porsche-with-dua-lipa-new.jpg" alt="Foto 1"></div>
-				<div><img src="img/3698A3126E554226AE9A4FC07017FBB4_8D933D359101497F951C5704F25F6030_discovering-porsche-with-dua-lipa-new-2.jpg" alt="Foto 2"></div>
-				<div><img src="img/545FEE9316AF49EBA60516A720644741_0AF58E6F4FC94AB7A84754776ED18928_discovering-porsche-with-dua-lipa-new.jpg" alt="Foto 3"></div>
-			</div>
+</section>
 				<section class="container-gallery">
 					<div class="gallery-item">
 						<img src="img/cayenne.jpg" alt="Cayenne">

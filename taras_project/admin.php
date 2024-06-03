@@ -11,7 +11,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
                 <h1>Admin interface</h1>
                 <?php
                 if($_SESSION['is_admin'] == 1){
-                    include('partials/admin-kontakt.php');
+                    include('admin-data.php');
                 }
                 ?>
             </div>

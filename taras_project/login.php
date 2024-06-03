@@ -1,11 +1,13 @@
 <?php
+include('partials/header.php');
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require_once("user.php");
 
-session_start(); // Сессия должна быть запущена до любых выводов данных
+session_start();
 
 $user = new User();
 
@@ -14,10 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     if ($user->login($name, $password)) {
-        header("Location:./index.php"); // Убедитесь, что путь правильный
-        exit(); // Завершить скрипт после перенаправления
+        $_SESSION['logged_in'] = true;
+        $_SESSION['user_id'] = $user->getUserIdByName($name); 
+        $_SESSION['is_admin'] = $user->isAdmin($name);
+
+        header("Location: admin-data.php");
+        exit();
     } else {
-        echo "Неправильный логин или пароль.";
+        echo "Incorrect login or password.";
     }
 }
 ?>
@@ -25,21 +31,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>login</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Login</title>
 </head>
 <body>
     <header>
-        <h1>login</h1>
+        <h1>Login</h1>
     </header>
     <div class="container">
         <form action="login.php" method="POST">
             <div>
                 <input type="text" placeholder="Enter Username" name="name" required>
                 <input type="password" placeholder="Enter Password" name="password" required>
-                <button type="submit">login</button>
+                <button type="submit">Login</button>
             </div>
         </form>
     </div>
+    <?php include('partials/footer.php'); ?>
 </body>
 </html>
